@@ -8,6 +8,11 @@ body {
   background: #0E8E97;
   color: #0A0A0A;
 }
+a:focus,
+a:hover {
+  text-decoration: none;
+  outline: none;
+}
 .layer {
   height: 100%;
 }

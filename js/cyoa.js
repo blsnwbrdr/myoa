@@ -1,5 +1,13 @@
 $(document).ready(function() {
-  'use strict';  
+  'use strict';
+  // PAGE SCROLLING FEATURE
+  $('a.page-scroll').bind('click', function(event) {
+      var $anchor = $(this);
+      $('html, body').stop().animate({
+          scrollTop: ($($anchor.attr('href')).offset().top - 0)
+      }, 500, 'easeInOutExpo');
+      event.preventDefault();
+  });
   // GET JSON FILE
   $.ajax({
     url: "story.json",
@@ -11,8 +19,8 @@ $(document).ready(function() {
       $('h1').html(story[0].header);
       $('#image').attr('src',story[0].image);
       $('#story').html(story[0].text);
-      $('#1').text(story[0].button1);
-      $('#2').text(story[0].button2);
+      $('#1').html(story[0].button1);
+      $('#2').html(story[0].button2);
       $('#1,#2').css('display',story[0].display);
       // COUNTER
       var start = 0;
@@ -29,8 +37,8 @@ $(document).ready(function() {
               $('#image').attr('src',story[i].image);        
             }
             $('#story').html(story[i].text);
-            $('#1').text(story[i].button1);
-            $('#2').text(story[i].button2);
+            $('#1').html(story[i].button1);
+            $('#2').html(story[i].button2);
             $('#1,#2').css('display',story[i].display);
             return;
           } else {
@@ -50,8 +58,8 @@ $(document).ready(function() {
               $('#image').attr('src',story[i].image);        
             }        
             $('#story').html(story[i].text);
-            $('#1').text(story[i].button1);
-            $('#2').text(story[i].button2);
+            $('#1').html(story[i].button1);
+            $('#2').html(story[i].button2);
             $('#1,#2').css('display',story[i].display);
             return;
           } else {

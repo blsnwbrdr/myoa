@@ -1,6 +1,5 @@
 $(document).ready(function() {
-//  "use strict";  
-  
+//  "use strict";    
   $('#submit').click(function() {
     // PAGE 1
     var title = $('#title').val();
@@ -41,7 +40,7 @@ $(document).ready(function() {
       $('#newStory').html('<h4 class="error">Sorry, but there was an error. Please check for empty fields.</h4>');
       return;
     }
-    // OBJECT CONSTRUCTOR
+    // USER INPUT CONSTRUCTOR
     function page(header, story, image, text, button1, button2, display) {
       this.header = header;
       this.story = story;
@@ -85,131 +84,6 @@ $(document).ready(function() {
     userStory.push(input_0212);
     userStory.push(input_0221);
     userStory.push(input_0222);
-    
-//    var userStory = 
-//        [
-//          {
-//            "header": title,
-//            "story": "initial story",
-//            "image": "",
-//            "text": page_0,
-//            "button1": button_01,
-//            "button2": button_02,
-//            "display": ""
-//          },
-//          {
-//            "story": "01",
-//            "image": "",
-//            "text": page_01,
-//            "button1": button_011,
-//            "button2": button_012,
-//            "display": ""
-//          },
-//          {
-//            "story": "02",
-//            "image": "",
-//            "text": page_02,
-//            "button1": button_021,
-//            "button2": button_022,
-//            "display": ""
-//          },
-//          {
-//            "story": "011",
-//            "image": "",
-//            "text": page_011,
-//            "button1": button_0111,
-//            "button2": button_0112,
-//            "display": ""
-//          },
-//          {
-//            "story": "012",
-//            "image": "",
-//            "text": page_012,
-//            "button1": button_0121,
-//            "button2": button_0122,
-//            "display": ""
-//          },
-//          {
-//            "story": "021",
-//            "image": "",
-//            "text": page_021,
-//            "button1": button_0211,
-//            "button2": button_0212,
-//            "display": ""
-//          },
-//          {
-//            "story": "022",
-//            "image": "",
-//            "text": page_022,
-//            "button1": button_0221,
-//            "button2": button_0222,
-//            "display": ""
-//          },
-//          {
-//            "story": "0111",
-//            "image": "",
-//            "text": page_0111,
-//            "button1": "",
-//            "button2": "",
-//            "display": "none"
-//          },
-//          {
-//            "story": "0112",
-//            "image": "",
-//            "text": page_0112,
-//            "button1": "",
-//            "button2": "",
-//            "display": "none"
-//          },
-//          {
-//            "story": "0121",
-//            "image": "",
-//            "text": page_0121,
-//            "button1": "",
-//            "button2": "",
-//            "display": "none"
-//          },
-//          {
-//            "story": "0122",
-//            "image": "",
-//            "text": page_0122,
-//            "button1": "",
-//            "button2": "",
-//            "display": "none"
-//          },
-//          {
-//            "story": "0211",
-//            "image": "",
-//            "text": page_0211,
-//            "button1": "",
-//            "button2": "",
-//            "display": "none"
-//          },
-//          {
-//            "story": "0212",
-//            "image": "",
-//            "text": page_0212,
-//            "button1": "",
-//            "button2": "",
-//            "display": "none"
-//          },
-//          {
-//            "story": "0221",
-//            "image": "",
-//            "text": page_0221,
-//            "button1": "",
-//            "button2": "",
-//            "display": "none"
-//          },
-//          {
-//            "story": "0222",
-//            "image": "",
-//            "text": page_0222,
-//            "button1": "",
-//            "button2": "",
-//            "display": "none"
-//          }
-//        ];
     // COMMUNICTATE WITH JSON AND PHP
     $.ajax({
       url: "generate.php",
@@ -219,7 +93,6 @@ $(document).ready(function() {
         var newDir = $.parseJSON(dirName);
         $('#newStory').html('<a href="stories/' + newDir + '" target="_blank"><button>New Story</button></a><h3>Congrats! You have created a new adventure.</h3>');
       }
-    });
-  }); // END SUBMIT
-  
+    });    
+  }); // END SUBMIT 
 }); // END JQUERY
