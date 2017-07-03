@@ -40,6 +40,7 @@ $(document).ready(function() {
             $('#1').html(story[i].button1);
             $('#2').html(story[i].button2);
             $('#1,#2').css('display',story[i].display);
+            $('#page').hide().fadeIn();
             return;
           } else {
           }
@@ -61,6 +62,7 @@ $(document).ready(function() {
             $('#1').html(story[i].button1);
             $('#2').html(story[i].button2);
             $('#1,#2').css('display',story[i].display);
+            $('#page').hide().fadeIn();
             return;
           } else {
           }

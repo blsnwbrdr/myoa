@@ -91,7 +91,7 @@ $(document).ready(function() {
       data: { data: JSON.stringify(userStory) },
       success: function(dirName) {
         var newDir = $.parseJSON(dirName);
-        $('#newStory').html('<a href="stories/' + newDir + '" target="_blank"><button>New Story</button></a><h3>Congrats! You have created a new adventure.</h3>');
+        $('#newStory').html('<a href="stories/' + newDir + '" target="_blank"><button>Go to your story</button></a><h3>Congrats! You have created a new adventure.</h3>');
       }
     });    
   }); // END SUBMIT 
